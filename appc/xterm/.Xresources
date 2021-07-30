@@ -1,42 +1,26 @@
-! xterm字体
-XTerm*faceName:DejaVu Sans Mono:antilias=True
+xterm*utf8Title: true
+xterm*cjkWidth: false
+XTerm*locale: zh_CN.UTF-8
+XTerm*faceNameDoublesize: WenQuanYi Micro Hei Mono:antialias=True:pixsize=14
+XTerm*faceName:DejaVu Sans Mono:antilias=True:pixsize=14
 
-! 中文字体
-XTerm*faceNameDoublesize:WenQuanYi Zen Hei Mono:antialias=True
-
-! 字体大小
-XTerm*faceSize: 13
-
-! 输入工具
 XTerm*inputMethod:fcitx
+XTerm*SaveLines: 10240
 
-! 命令记录行数
-XTerm*SaveLines: 4096
-
-! color
-! XTerm*background: black
-! XTerm*foreground: lightyellow
-
-! 打开窗口的大小
 XTerm*geometry: 120x35+500+250
 XTerm*metaSendsEscape: true
 XTerm*eightBitInput: false
 XTerm*selectToClipboard: true
 xterm*utf8: true
-xterm*utf8Title: true
-XTerm*locale: zh_CN.UTF-8
 
-! 真彩显示
 xterm*termName: xterm-256color
+!XTerm*cursorColor: *XtDefaultForeground
 
-XTerm*cursorColor: *XtDefaultForeground
-
-! 光标闪烁
 XTerm*cursorBlink: true
 
-! 配色
 xterm*background:   #1a1a1a
-xterm*foreground:   #ffffe0
+!xterm*foreground:   #ffffe0
+XTerm*foreground: lightyellow
 xterm*cursorColor:  #fee110
 xterm*color0:       #000000
 xterm*color1:       #9e1828
