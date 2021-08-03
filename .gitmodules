@@ -1,0 +1,6 @@
+[submodule "appc/omz/custom/plugins/zsh-syntax-highlighting"]
+	path = appc/omz/custom/plugins/zsh-syntax-highlighting
+	url = git@github.com:zsh-users/zsh-syntax-highlighting.git
+[submodule "appc/omz/custom/plugins/zsh-autosuggestions"]
+	path = appc/omz/custom/plugins/zsh-autosuggestions
+	url = git@github.com:zsh-users/zsh-autosuggestions.git
