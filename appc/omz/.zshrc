@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/ahaoo/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -114,14 +114,22 @@ source $ZSH/oh-my-zsh.sh
 # exec 3>&2 2>/tmp/zshstart.$$.log
 # setopt xtrace prompt_subst
 
-export PATH="/opt/hisi-linux/x86-arm/aarch64-himix100-linux/bin:$HOME/.local/go/bin:$HOME/dev/go/bin:$HOME/.local/cmake/cmake-3.6.1/bin:$HOME/.local/protobuf/protobuf-3.17.3/bin:$PATH"
-export LD_LIBRARY_PATH="$HOME/.local/ffmpeg/SDL2/SDL2-2.0.14/lib:$HOME/.local/ffmpeg/ffmpeg-4.4/lib:$HOME/.local/protobuf/protobuf-3.17.3/lib:$LD_LIBRARY_PATH"
+export PATH="/opt/hisi-linux/x86-arm/aarch64-himix100-linux/bin:$HOME/.local/go/bin:$HOME/dev/go/bin:$HOME/.local/cmake/cmake-3.6.1/bin:$HOME/.local/protobuf/protobuf-3.17.3/bin:$HOME/.local/opencv/opencv-4.5.3/bin:$HOME/.local/node/node-v14.17.4/bin:$PATH"
+export C_INCLUDE_PATH="$HOME/.local/opencv/opencv-4.5.3/include:$HOME/.local/ffmpeg/ffmpeg-4.4/include:$HOME/.local/ffmpeg/SDL2/SDL2-2.0.14/include:$HOME/.local/protobuf/protobuf-3.17.3/include:$HOME/.local/node/node-v14.17.4/include:$HOME/.local/cJSON/cJSON-1.7.15/include:$C_INCLUDE_PATH"
+export CPLUS_INCLUDE_PATH=$C_INCLUDE_PATH
+export LD_LIBRARY_PATH="$HOME/.local/ffmpeg/SDL2/SDL2-2.0.14/lib:$HOME/.local/ffmpeg/ffmpeg-4.4/lib:$HOME/.local/protobuf/protobuf-3.17.3/lib:$HOME/.local/opencv/opencv-4.5.3/lib:$HOME/.local/node/node-v14.17.4/lib:$HOME/.local/cJSON/cJSON-1.7.15/lib:$LD_LIBRARY_PATH"
+export LIBRARY_PATH=$LD_LIBRARY_PATH
 export GOPATH="$HOME/dev/go"
+export GIT_LFS_SKIP_SMUDGE=1
 
-# 这个太慢了，不用了
+# unsetopt xtrace
+# exec 2>&3 3>&-
 # [[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh
 # autoload -U compinit && compinit -u
 
 #ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=blue,underline
 #ZSH_HIGHLIGHT_STYLES[precommand]=fg=blue,underline
 ZSH_HIGHLIGHT_STYLES[arg0]=fg=green,bold
+
+alias cman="man -M /usr/share/man/zh_CN"
+! ps aux | grep -q fetchmail && fetchmail &
